@@ -18,7 +18,6 @@ def rouleau() :
     '''
     return choice("$%#~&")
 
-#Essayer de coder plus propre !!!!!!!
 def calculeGain(mise, symbole1,symbole2, symbole3) :
     '''
     Permet de connaitre le gain de la personne grace a la combinaison des trois rouleau et a sa mise
