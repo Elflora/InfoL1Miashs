@@ -1,3 +1,5 @@
+#C'est bien parenthésé si le compteur n'est jamais négatif
+
 def nbParenthese(chaine) :
     '''
     >>> nbParenthese("(()())")

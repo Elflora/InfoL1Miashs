@@ -48,6 +48,23 @@ def estADN(chaine) :
             save = False
     return save
 
+def est_ADN(chaine):
+    '''
+    >>> est_ADN('ATGCGATC')
+    True
+    >>> est_ADN('ACKT')
+    False
+    >>> est_ADN('ACTK')
+    False
+    >>> est_ADN("")
+    True
+    '''
+    adn=True
+    for c in chaine:
+        if not (c in 'ATCG'):
+            adn=False
+    return adn      
+
 def genereADN(taille) :
     sequence = ''
     for i in range(taille) :
@@ -88,12 +105,11 @@ def motifOccurrences(motif, sequence) :
     >>> motifOccurrences('TTC', 'AGTCGACTT')
     0
     '''
-    j = 3
+    j = len(motif)
     save = 0
-    for i in range(len(sequence)-2) :
-        if sequence[i:j] == motif :
+    for i in range(len(sequence)-j+1) :
+        if sequence[i:j+i] == motif :
             save += 1
-        j+=1
     return save
 
 def ajoutTirets(mot) :
@@ -136,6 +152,15 @@ def estPhrasePalindrome(phrase) :
     '''
     phrase = supprimeCara(phrase, " ")
     return estPalindrome1(phrase)
+
+def chiffre1(c):
+    '''
+    >>> chiffre1('0')
+    0
+    >>> chiffre1('4')
+    4
+    '''
+    return ord(c)-ord('0')
 
 def chiffre(chiffre) :
     '''
