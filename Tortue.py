@@ -1,7 +1,7 @@
+#Carpentier Madeline
+
 import turtle
 from math import *
-#Il se passe des choses bizarre dans ce code
-#PAS FINI
 
 def spiral(n) :
     turtle.pencolor("red")
@@ -49,11 +49,11 @@ def carreTournant(n) :
         turtle.down()
 
 def carreEmboite(n) :
-    longueur = 50
+    longueur = 250
     angle = atan(0.5 / (1 - 0.5)) * 180 / pi
     coeff = sqrt(2)
     
-    for i in range(n+1) :
+    for i in range(n) :
         carre(longueur)
         turtle.forward(0.5 * longueur)
         turtle.right(angle)
